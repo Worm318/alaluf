@@ -32,6 +32,7 @@ get_header(); ?>
 			});
 		}
 		
+		
 		function initialize() {
 			mapOptions = {
 			  center: new google.maps.LatLng(-33.5454123,-70.6007167),
@@ -94,64 +95,89 @@ get_header(); ?>
 	   
     </script>
 	
-	<script language="javascript" type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/galleria-1.2.9.min.js"></script>
-	<script>
-	jQuery(document).ready(function($){
-		Galleria.loadTheme('<?php bloginfo('template_url'); ?>/js/galleriatheme/galleria.alaluf.js');
-		Galleria.run('#slider-spot',{
-			autoplay: 5000,
-			imageCrop: 'width',			
-			_thumbnails: true,
-			_toggleInfo: true,
-			_bgcolor: 'white'
-		});
-	});
-	</script>
-	
-<?php get_sidebar(); ?>
+
 
 <div id="ficha-propiedad">
-	<table id="info-propiedad">
+	<div id="info-propiedad">
+		<table id="info">
 		<tr>
-		<td id="slider-spot">
-			<img src="<?php bloginfo('template_url');?>/images/casa_ph/1.jpg" />
-			<img src="<?php bloginfo('template_url');?>/images/casa_ph/2.jpg" />
-			<img src="<?php bloginfo('template_url');?>/images/casa_ph/3.jpg" />
-		</td>
 		<td id="info-basica">
-			<h1>Santo Domingo / Mac-Iver / Bellas Artes</h1>
-
-			<span id="operacion"><img src="<?php bloginfo('template_directory'); ?>/images/icons/home.png" alt="" /> Departamento en Arriendo</span><br/>
-			<span id="interesados"><img src="<?php bloginfo('template_directory'); ?>/images/icons/users.png" alt="" />Hay 2345 interesados</span><br/>
-			<span id="fec-publicacion">Publicada el 07-08-2012</span><br/>
-
-			<h2>Precio: $ 170.000 (CLP)</h2>
-			<ul>
+		<h1>Santo Domingo / Mac-Iver / Bellas Artes</h1>
+		
+		<span id="operacion"><img src="<?php bloginfo('template_directory'); ?>/images/icons/home.png" alt="" /> Departamento en Arriendo</span><br/>
+		<span id="interesados"><img src="<?php bloginfo('template_directory'); ?>/images/icons/users.png" alt="" />Hay 2345 interesados</span><br/>
+		<span id="fec-publicacion">Publicada el 07-08-2012</span><br/>
+		
+		<h2>Precio: $ 170.000 (CLP)</h2>
+		<ul>
 			<li> Habitaciones: 1 </li>
 			<li> Baños: 1 </li>
 			<li> Dimensiones: 22 m2 </li>
 			<li> Código: p2762 </li>
-			</ul>
-
-			<p>Excelente estudio en extraordinaria ubicación, pequeña terraza, baño, cocina americana. Edificio moderno y full equipado, piscina, gimnasio, lavandería. Bajo gasto común. Estacionamiento opcional, costo adicional</p>
+		</ul>
 		
+		<p>Excelente estudio en extraordinaria ubicación, pequeña terraza, baño, cocina americana. Edificio moderno y full equipado, piscina, gimnasio, lavandería. Bajo gasto común. Estacionamiento opcional, costo adicional</p>
 		</td>
-		</tr>
-		<tr>
 		
-		<td id="video-spot">
-			<iframe width="395" height="300" src="http://www.youtube.com/embed/omLgv9lJ9jE" frameborder="0" allowfullscreen></iframe>
-		</td>
-		<td id="mapa">
-			<span id="gm-viewgm" class="pestana selected clickable">Mapa</span><span id="gm-viewstreet" class="pestana clickable">Street View</span>
-			<div id="gm-container">
-				<div id="map_canvas" style="width:100%; height:100%">
-					
-				</div>
+	<td id="slider-spot">
+		
+	</td>
+	</tr>
+	<tr><td colspan="2">
+	<div id="mapa">
+		<span id="gm-viewgm" class="pestana selected clickable">Mapa</span><span id="gm-viewstreet" class="pestana clickable">Street View</span>
+		<div id="gm-container">
+			<div id="map_canvas" style="width:100%; height:100%">
+				
 			</div>
-		</td>
-		</tr>
-		</table>
+		</div>
 	</div>
-<hr >
+	
+
+	
+	
+	</td>
+	</tr>
+	</table>
+	</div>
+	<div id="ficha-side">
+		<h1>Comparte</h1>
+		<div id="share">
+		Botones varios
+		</div>
+		<h1>¿Tienes preguntas?</h1>
+		<div id="contacto">
+		<div class="dato"><img src="<?php bloginfo('template_directory'); ?>/images/icons/user.png" alt="" />Tatiana Torres</div>
+		
+		<div class="dato"><img src="<?php bloginfo('template_directory'); ?>/images/icons/phone.png" alt="" />(56 2) 2 481 0181</div>
+		
+		<form id="formulario" action="mailto:contacto@reframe.cl">
+			<input name="formnombre"	placeholder="Nombre" required />
+			<input name="formemail"	placeholder="Email" required />
+			
+			<input name="formphone"	placeholder="Teléfono"/>
+			
+			<textarea></textarea>
+			
+			<input type="submit" value="Contactar">
+			
+		</form>
+		
+		</div>
+		<h1>Propiedades cercanas</h1>
+		<div id="prop_cercanas">
+			
+		</div>
+		
+	</div>
+	<hr >
+
+</div>
+
+
+
+
+
 <?php get_footer(); ?>
+
+<?php var_dump($_GET); ?>

@@ -8,3 +8,8 @@
 }
 add_action( 'init', 'register_my_menus' );
 ?>
+
+<?php
+if ( function_exists('register_sidebar') )
+register_sidebar();
+?>

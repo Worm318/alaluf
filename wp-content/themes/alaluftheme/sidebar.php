@@ -45,5 +45,11 @@
 		<div class="plegable hidden">
 			<?php wp_nav_menu( array( 'theme_location' => 'extra-menu' ) ); ?>
 		</div>
-		<h3>Preguntas frecuentes</h3>	
+		<h3>Preguntas frecuentes</h3>
+
+		<?php
+		if ( !function_exists('dynamic_sidebar')	|| !dynamic_sidebar() ) :
+		endif;
+		?>
+		
 	</div>
