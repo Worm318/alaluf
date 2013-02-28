@@ -6,20 +6,37 @@
 	width: 705px;
 }
 
+#content-posts h1{
+	margin: 5px 0px 10px 0px;
+	font-size: 25pt;
+	font-weight: bold;
+	background: #099;
+	padding: 5px;
+	color: white;
+}
+
 #content-posts h2{
 	font-size: 20pt;
 	margin: 10px 0px;
+	background: #099;
+	padding: 5px;
+	color: white;
 }
 
 #content-posts h2 > a{
-	
-	color: black;
+	padding: 5px;
+	color: white;
+	text-decoration: none;
 }
 
-#content{
-	border: 1px solid;
-	margin: 10px;
-	padding: 15px;
+#content-posts .main{
+	font-size: 12pt;
+	padding: 5px;
+}
+
+#content-posts .entry{
+	padding: 5px;
+	font-size: 10pt;
 }
 
 #post{
@@ -34,7 +51,6 @@
 
 div#comentarios{
 	padding: 20px;
-	margin: 20px 0px;
 	background: #ddd;
 }
 
@@ -65,4 +81,14 @@ div#comentarios{
 
 #respond{
 	font-size: 10pt;
+}
+
+.main ul{
+	list-style: disc;
+	padding-left: 20px ;
+	margin: 10px 0px;
+}
+
+.servicio hr{
+	clear: left;
 }

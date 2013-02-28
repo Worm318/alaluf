@@ -5,11 +5,12 @@
  */
 get_header(); ?>
 	
-<?php get_sidebar(); ?>
+
 	
-	<script language="javascript" type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/galleria-1.2.9.min.js"></script>
-	<div id="content-posts">
-	<div id="slider-container">
+
+	
+	<div id="content-posts" style="width:100%">
+	<div id="slider-container" class="proyectos">
 	<?php 
 		$args = array(
 		'post_type' => 'attachment',
@@ -28,7 +29,6 @@ get_header(); ?>
 	<?php	}
 	}?>
 	</div>
-	</div>
 	
 	<script>
 	jQuery(document).ready(function($){
@@ -40,6 +40,10 @@ get_header(); ?>
 		});
 	});
 	</script>
+	
+	</div>
+	
+
 
 	
 

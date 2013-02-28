@@ -1,3 +1,4 @@
+		<hr>
 		</div> <!--div#main-->
 		</div> <!--div#sup-main -->
 		</div> <!--div#inf-main -->

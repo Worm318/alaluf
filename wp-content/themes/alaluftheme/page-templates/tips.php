@@ -13,8 +13,10 @@ get_header(); ?>
 		<div class="description">
 		<?php while ( have_posts() ) : the_post(); ?>
 		
-			<?php the_content(''); ?>
-				
+		<div class="main">
+		<?php the_content(''); ?>
+		</div>
+		
 		<?php endwhile; ?>
 		<?php wp_reset_query(); ?>
 		
@@ -29,7 +31,9 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<div id="content">
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<?php the_content(''); ?>
+					<div class="entry">
+					<?php the_content(''); ?>
+					</div>
 				</div>
 			<?php endwhile; ?>
 			

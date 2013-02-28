@@ -28,6 +28,10 @@ html,body{
 	margin-right: 15px;
 }
 
+img.size-small{
+	height: 100px;
+}
+
 .limited{
 	width: 960px;
 	margin: 0 auto;
@@ -58,10 +62,57 @@ h3, .noselect{
 
 header{
 	height: 200px;
+	background: white;
 }
 
 header #logo{
 	height: 90px;
+	width: 290px;
+	display: inline-block;
+}
+
+#header-sec-menu{
+	display: inline-block;
+	vertical-align:top;
+	/*background: #aaa;*/
+	width: 660px;
+	float:right;
+}
+
+#header-sec-menu ul{
+	height: 70px;
+	padding: 10px 0px;
+	max-height: 90px;
+	overflow: hidden;
+}
+
+#header-sec-menu li{
+	float: left;
+	background: black;
+	/*min-width:180px;*/
+	margin: 5px 10px;
+	
+}
+
+#header-sec-menu li a{
+	display: block;
+	background: black;
+	
+	padding: 5px 5px;
+	
+	width: 100%;
+	height: 100%;
+	font-size: 10pt;
+	text-align: center;
+}
+
+#header-sec-menu li a{
+	text-decoration : none;
+	color: white;
+}
+
+#header-sec-menu li a:hover{
+	background: #099;
 }
 
 header #header-menu{
@@ -72,43 +123,49 @@ header #header-menu{
 }
 
 header #banner{
-	background: gray;
 	height: 80px;
 }
 
-header ul{
+#header-menu ul{
 	float: right;
 	position: relative;
 	right: 15px;
 }
 
-header li{
+#header-menu li{
 	list-style: none;
 	float: left;
 	padding: 5px;
 }
 
-header li a {
+#header-menu li a {
 	text-decoration: none;
 	color: white;
 }
 
-header li a:hover {
-	color: gray;
+#header-menu li a:hover {
+	color: #099;
 }
 
 #sup-main{
 	background-image: url(images/pattern.png);
 }
 
+.fondo{
+	position:fixed;
+	display:none;
+	top: 0;
+	width:100%;
+	z-index:-1;
+}
+
 #inf-main{
-	background-image: url(images/grass.jpg);
-	background-size: cover;
+	
 }
 
 #main{
 	background: white;
-	padding: 15px 20px 25px 20px;
+	padding: 15px 20px 15px 20px;
 	min-height: 600px;
 	
 	-webkit-box-shadow: 0px 0px 20px 10px ;
@@ -118,14 +175,36 @@ header li a:hover {
 #footer{
 	background: black;
 	height: 80px;
+	width: 100%;
+	z-index: 9999;
 }
 
+#footer .limited{
+	position: relative;
+}
+
+#footer .limited > p{
+	line-height: 80px;
+	text-align: center;
+	color: white;
+	font-size: 9pt;
+}
+
+#footer .limited > a{
+	position: absolute;
+	left: 0;
+}
+
+#footer .limited a > img{
+	margin-bottom: -3px;
+}
 
 /* HOME */
 #slider-container{
 	position: relative;
 	height: 300px;
 	margin-bottom: 15px;
+	margin-top: 5px;
 }
 
 #slider-container p{
@@ -154,7 +233,7 @@ header li a:hover {
 	width: 170px;
 }
 
-#busqueda .layout-slider{	
+#busqueda .layout-slider{
 	display:table-cell;
 	width: 100px;
 	margin: 10px 10px 30px 10px;
@@ -184,6 +263,11 @@ header li a:hover {
     padding: 5px;
 }
 
+
+#side-menu h3:hover{
+	background: #099;
+}
+
 #busqueda h3,#side-menu h3{
 	font-size: 12pt;
 	color: white;
@@ -204,8 +288,8 @@ header li a:hover {
 }
 
 .selected#venta-button, .selected#arriendo-button {
-	background: #ddd;
-	color: black;
+	background: #099;
+	color: white;
 }
 
 #buttons button:first-child{
@@ -244,12 +328,16 @@ header li a:hover {
 }
 
 #reset{
-	text-align: center;
+	text-align: center;	
 }
 
-#reset-button{
-	background: white;
-	color: black;
+.reset-button{
+	background: #099;
+	color: white;
+	font-size: 8pt;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 }
 
 .intitle{
@@ -280,6 +368,16 @@ header li a:hover {
 }
 
 /*Sidebar*/
+#side-menu a.link{
+	color: white;
+	text-decoration: none;
+}
+
+#side-menu a.link:hover{
+	color: #099;
+	text-decoration: none;
+}
+
 #menu-enlaces-de-interes,.postslista{
 	list-style: none;
 	padding-left: 10px;	
@@ -289,31 +387,36 @@ header li a:hover {
 	text-decoration: none;
 	padding: 5px;
 	width: 90%;
-	background: gray;
+	background: #158080;
 	margin-bottom: 5px;
+	color: white;
 }
 
 #menu-enlaces-de-interes li:hover,.postslista li:hover{
-	background: #ccc;
-}	
+	background: #A0E2E2;
+	color: black;
+}
 
 #menu-enlaces-de-interes a,.postslista a{
 	text-decoration: none;
 	color: white;
+	display:block;
+	width: 100%;
 }
 
 #see-all {
 	font-size: 10pt;
-	background: #333;
+	background: #024141;
 }
 
 #see-all:hover{
-	color: #ddd;
+	background: #63E2E2;
+	color: black;
 }
 
 #menu-enlaces-de-interes a:hover, .postslista a:hover{
 	text-decoration: none;
-	color: #444;
+	color: black;
 }	
 
 /***
@@ -325,17 +428,43 @@ header li a:hover {
 /**** Isotope Filtering ****/
 
 #isotope-container{
-	width: 705px;
 	min-height: 600px;
 }
 
 #isotope-container .propiedad{
 	width: 190px;
-	padding: 10px;	
+
 	margin: 10px 10px 10px 0px;
 	background: gray;
 	overflow:hidden;
 }
+
+#isotope-container .propiedad img{
+	width: 190px;
+}	
+
+#isotope-container .propiedad button{
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0 none;
+	font-weight: bold;
+	cursor:pointer;
+}
+
+#isotope-container .propiedad div.info{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: black;
+	color: white;
+	padding: 5px;
+	max-width: 190px;
+	max-height: 16px;
+	line-height: 20px;
+	overflow: hidden;
+}
+
 
 #isotope-container .propiedad a{
 	text-decoration: none;
@@ -379,6 +508,16 @@ header li a:hover {
        -o-transition-property: height, width;
           transition-property: height, width;
 }
+
+.isotope .isotope-item {
+  -webkit-transition-property: top, left, opacity;
+     -moz-transition-property: top, left, opacity;
+      -ms-transition-property: top, left, opacity;
+       -o-transition-property: top, left, opacity;
+          transition-property: top, left, opacity;
+}
+
+
 
 .isotope .isotope-item {
   -webkit-transition-property: -webkit-transform, opacity;
@@ -507,67 +646,6 @@ header li a:hover {
 	font-size: 11pt;
 }
 
-
-
-/*
-#ficha-propiedad #ficha-side{
-	float:left;
-	width: 179px;
-	padding-left: 20px;
-}
-
-#ficha-side h1{
-	background: gray;
-	color: white;
-	padding: 5px;
-	font-weight: bold;
-}
-
-#ficha-side #share{
-	height: 140px;
-}
-
-#ficha-side #contacto{
-	padding: 10px 0px;
-}
-
-#contacto .dato{
-	padding: 7px 0px;
-	font-size: 10pt;
-}	
-
-#contacto img{
-	width: 16px;
-	height: 16px;
-	margin: -2px 5px;
-}
-
-#contacto #formulario{
-	background: #fd3d16;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	border-radius: 8px;
-	padding: 5px;
-}
-
-#formulario input, #formulario textarea{
-	width: 95%;
-	margin: 4px auto;
-}
-
-#formulario input{
-	height: 28px;
-}
-
-#formulario textarea{
-	height: 180px;
-}
-
-#prop_cercanas{
-	height: 300px;
-	background: #ddd;
-}*/
-
 hr{
 	clear: both;
 	visibility:hidden
@@ -609,19 +687,68 @@ hr{
 	height: 300px;
 }
 
-#footer .limited{
-	position: relative;
-}
-
-#footer .limited > p{
-	line-height: 80px;
-	text-align: center;
+/*SERVICIOS*/
+#content-posts h1.servicio{
+	background: #009999;
+	padding: 5px;
 	color: white;
-	font-size: 9pt;
+	font-size: 18pt;
 }
 
-#footer .limited > a{
+#content-posts h2.servicio{
+	background: #009999;
+	padding: 5px;
+	color: white;
+	font-size: 16pt;
+	margin: 0;
+}
+
+#content-posts h2.servicio > a{
+	color: #ededed;
+	text-decoration: none;
+}
+
+#content-posts h2.servicio > a:hover{
+	color: white;
+}
+
+#content-posts .entry.servicio{
+	padding: 5px 0px;
+}	
+
+#content-posts .entry.servicio p{
+	margin: 5px 0px;
+}
+
+.entry.servicio{
+	font-size: 10pt;
+	padding: 0px;
+}
+
+.main.servicio{
+	font-size: 12pt;
+	padding: 5px;
+}
+
+#servicio-container{
+	position: relative;
+	width: 705px;
+	min-height: 590px;
+}
+
+#servicio-container .icono{
 	position: absolute;
-	left: 0;
-	
+	width: 100px;
+	height: 100px;
+	z-index: 2;
+}
+
+#servicio-container .descripcion{
+	display: none;
+}
+
+
+/*PROYECTOS*/
+#slider-container.proyectos{
+	height: 600px;
 }
